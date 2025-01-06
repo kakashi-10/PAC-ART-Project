@@ -185,9 +185,9 @@ def other(image, text_input=None):
     _, img_encoded = cv2.imencode('.png', img_array)
     img_bytes = img_encoded.tobytes()
 
-    api_url = "https://api.deepai.org/api/image-editor"
+    api_url = ""
     headers = {
-        'api-key': "054ee0f9-038b-455b-8630-9a3b82365c30"
+        'api-key': ""
     }
     
     files = {'image': img_bytes}
@@ -213,9 +213,9 @@ def remove_background(image):
     _, img_encoded = cv2.imencode('.png', img_array)
     img_bytes = img_encoded.tobytes()
 
-    api_url = "https://api.deepai.org/api/background-remover"
+    api_url = ""
     headers = {
-        'api-key': "054ee0f9-038b-455b-8630-9a3b82365c30"
+        'api-key': ""
     }
     files = {'image': img_bytes}
 
@@ -249,9 +249,9 @@ def super_sesolution(image):
     _, img_encoded = cv2.imencode('.png', img_array)
     img_bytes = img_encoded.tobytes()
 
-    api_url = "https://api.deepai.org/api/torch-srgan"
+    api_url = ""
     headers = {
-        'api-key': "054ee0f9-038b-455b-8630-9a3b82365c30"
+        'api-key': ""
     }
     files = {'image': img_bytes}
 
@@ -276,8 +276,8 @@ def colorizer(image):
         img_bytes = img_encoded.tobytes()
 
         # Gửi yêu cầu tới API
-        api_url = "https://api.deepai.org/api/colorizer"
-        headers = {'api-key': "054ee0f9-038b-455b-8630-9a3b82365c30"}
+        api_url = ""
+        headers = {'"}
         files = {'image': img_bytes}
 
         response = requests.post(api_url, headers=headers, files=files)
