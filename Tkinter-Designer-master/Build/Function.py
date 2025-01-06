@@ -134,8 +134,8 @@ def exportimage():
                 db = mysql.connector.connect(
                     host='localhost',
                     user='root',
-                    password='Thang23122004',
-                    database='pac_art'
+                    password='',
+                    database=''
                 )
                 cursor = db.cursor()
 
@@ -321,9 +321,9 @@ def ai_selfie(image, text_input=None):
     _, img_encoded = cv2.imencode('.png', img_array)
     img_bytes = img_encoded.tobytes()
 
-    api_url = "https://api.deepai.org/api/ai-selfie-generator"
+    api_url = ""
     headers = {
-        'api-key': "054ee0f9-038b-455b-8630-9a3b82365c30"
+        'api-key': ""
     }
     
     files = {'image': img_bytes}
